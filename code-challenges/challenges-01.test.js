@@ -1,5 +1,7 @@
 'use strict';
 
+const { name } = require("mustache");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -67,11 +69,11 @@ const greeting = (word) => {
 const speaker = (words, callback) => {
   // Solution code here...
   let mosab = [];
-  words.forEach(value =>{
+  words.forEach(value => {
     mosab.push(greeting(value));
   })
   return mosab
-  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,17 +94,23 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+
+  for (let i = 0; i < times; i++) {
+    addValues(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -117,7 +125,20 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
+
   // Solution code here...
+  let mosab = [];
+  availableItems.forEach(element => {
+    if (element.available === true) {
+      mosab.push(element.name);
+    }
+  });
+  return mosab
+  // availableItems.forEach(element=>{
+  //   if (available[element]===true) {
+  //     return name[element] 
+  //   }
+  // })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,6 +157,26 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let mosab = [];
+  arr.forEach(element => {
+    if (element % 3 ===0 && element % 5=== 0) {
+      mosab.push("Fizz Buzz")
+
+    } else if (element % 5===0) {
+      mosab.push("Buzz")
+    } else if (element % 3===0) {
+      mosab.push("Fizz")
+    } else {
+      mosab.push(element)
+    }
+
+
+
+  })
+  return mosab
+
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -189,7 +230,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
