@@ -101,8 +101,46 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  
+  return arr.sort()
 };
+
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 8 - Stretch Goal
+
+Write a function named sortByLength that takes in an array of strings and 
+returns the same array, with the strings sorted by their length, lowest to highest.
+------------------------------------------------------------------------------------------------ */
+
+const sortByLength = (arr) => {
+  // Solution code here...
+  return arr.sort(function(a, b){
+    
+    return  a.length - b.length ;
+  });
+
+  
+
+};
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 9 - Stretch Goal
+
+Write a function named sortNumbersByLength that takes in an array of numbers and sorts those numbers by their length.
+
+For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
+------------------------------------------------------------------------------------------------ */
+
+const sortNumbersByLength = (arr) => {
+  // Solution code here...
+};
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -120,7 +158,11 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  
+  arr.sort();
+  arr.sort((a,b) =>{
+    return a.price > b.price;
+  });
+  return arr ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,28 +174,6 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
-};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 8 - Stretch Goal
-
-Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
------------------------------------------------------------------------------------------------- */
-
-const sortByLength = (arr) => {
-  // Solution code here...
-};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 9 - Stretch Goal
-
-Write a function named sortNumbersByLength that takes in an array of numbers and sorts those numbers by their length.
-
-For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
------------------------------------------------------------------------------------------------- */
-
-const sortNumbersByLength = (arr) => {
   // Solution code here...
 };
 
