@@ -6,7 +6,7 @@ CHALLENGE 1 - Review
 Write a function called addTwo that takes in an array and adds two to every value using a for loop. 
 Place the new value in a new array. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
-arr=[1,2]
+
 const addTwo = (arr) => {
   // Solution code here...
   let mosab=[];
