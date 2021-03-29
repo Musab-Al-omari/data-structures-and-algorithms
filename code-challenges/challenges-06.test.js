@@ -99,14 +99,14 @@ const checkValues = (obj, value) => {
 
 
 
-  let mosab = Object.values(obj)
-  for (let i = 0; i < mosab.length; i++) {
-    if (moasb[i]===value) {
-      return true
-    } 
+  // let mosab = Object.values(obj)
+  // for (let i = 0; i < mosab.length; i++) {
+  //   if (moasb[i]===value) {
+  //     return true
+  //   } 
     
-  }
-  // return Object.values(obj).includes(value);
+  // }
+  return Object.values(obj).includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
