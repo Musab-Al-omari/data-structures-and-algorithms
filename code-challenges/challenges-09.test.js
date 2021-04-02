@@ -20,12 +20,13 @@ Becomes:
 
 function transformToLis(obj) {
   // Solution code here...
+
   let values = Object.entries(obj)
   let b = [];
   let x = [];
   x = values.forEach(value => {
     for (let i = 0; i < value.length - 1; i++) {
-      b.push(`<li>${value[i]}: ${value[i+1]}</li>`)
+      b.push(`<li>${value[i]}: ${value[i + 1]}</li>`)
     }
   })
   return b
@@ -166,8 +167,20 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+
+
+  let strArr = str.split('');
+  return strArr.reduce((accumulator, value) => {
+    return value + accumulator;
+  }, '');
+
+
 };
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
