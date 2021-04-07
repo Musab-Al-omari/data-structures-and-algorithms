@@ -59,6 +59,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  return matrix.reduce((a, b) => {
+    return a += b.reduce((a, b) => {
+      return a += b;
+    });
+  }, 0);
+
+
 };
 
 
